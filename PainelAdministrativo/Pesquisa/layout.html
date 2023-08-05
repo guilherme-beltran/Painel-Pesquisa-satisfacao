@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="Views/css/layout.css" />
+
+    <!----===== Iconscout CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <title>Layout | Painel Adminstrativo</title>
+  </head>
+  <body>
+    <!----======== MENU ======== -->
+    <nav>
+      <div class="logo-name">
+        <div class="logo-image">
+          <img src="Views/img/empresaxpto.png" alt="" />
+        </div>
+
+        <span class="logo_name">Empresa XPTO</span>
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">
+              <i class="material-icons">home</i>
+              <span class="link-name">Dahsboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="perguntas.html">
+              <i class="material-icons">quiz</i>
+              <span class="link-name">Perguntas</span>
+            </a>
+          </li>
+          <li>
+            <a href="respostas.html">
+              <i class="material-icons">question_answer</i>
+              <span class="link-name">Respostas</span>
+            </a>
+          </li>
+          <li>
+            <a href="layout.html">
+              <i class="material-icons">collections</i>
+              <span class="link-name">Layout</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="logout-mode">
+          <li>
+            <a href="#">
+              <i class="material-icons">logout</i>
+              <span class="link-name">Logout</span>
+            </a>
+          </li>
+
+          <li class="mode">
+            <a href="#">
+              <i class="material-icons">dark_mode</i>
+              <span class="link-name">Dark Mode</span>
+            </a>
+
+            <div class="mode-toggle">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!----======== FIM MENU ======== -->
+    <!----======== CONTEÚDO DA PÁGINA ======== -->
+    <section class="dashboard">
+      <!----======== HEADER ======== -->
+      <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+
+        <div class="search-box">
+          <i class="uil uil-search"></i>
+          <input type="text" placeholder="Pesquisar" />
+        </div>
+        <div class="sistemas">
+          <div class="wrapper sistemas">
+            <div class="select-btn">
+              <span>Trocar sistema</span>
+              <i class="uil uil-angle-down"></i>
+            </div>
+            <div class="content">
+              <div class="search">
+                <i class="material-icons">search</i>
+                <input
+                  spellcheck="false"
+                  type="text"
+                  placeholder="Navegar entre sistemas"
+                />
+              </div>
+              <ul class="options"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="nome_usuario">Olá, Guilherme Beltran</div>
+
+        <div class="imagens">
+          <img src="Views/img/empresaxpto.png" alt="" />
+        </div>
+      </div>
+      <!----======== FIM HEADER ======== -->
+      <!----======== CONTEÚDO DASHBOARD ======== -->
+      <div class="dash-content">
+        <!----======== GRAFICOS E DADOS DASHBOARD ======== -->
+        <div class="overview">
+          <div class="title">
+            <i class="material-icons">dashboard</i>
+            <span class="text">Layout</span>
+          </div>
+
+          <div class="imagens">
+            <div class="container logo">
+              <span class="text">Logo</span>
+              <input type="file" id="file_logo" accept="image/*" hidden>
+              <div class="img-area" data-img="">
+                <i class="uil uil-cloud-upload"></i>
+                <h3>Upload</h3>
+                <p>O tamanho da imagem deve ser inferior a <span>2MB</span></p>
+              </div>
+              <button class="select-image">Select Image</button>
+            </div>
+            <div class="container background">
+              <span class="text">Background</span>
+              <input type="file" id="file_background" accept="image/*" hidden>
+              <div class="img-area" data-img="">
+                <i class="uil uil-cloud-upload"></i>
+                <h3>Upload</h3>
+                <p>O tamanho da imagem deve ser inferior a <span>2MB</span></p>
+              </div>
+              <button class="select-image">Select Image</button>
+            </div>
+          </div>
+
+          <div class="title">
+            <i class="material-icons">dashboard</i>
+            <span class="text">Cores</span>
+          </div>
+
+        </div>
+        <!----======== FIM GRAFICOS E DADOS DASHBOARD ======== -->
+      </div>
+      <!----======== CONTEÚDO DASHBOARD ======== -->
+    </section>
+    <!----======== FIM CONTEÚDO DA PÁGINA ======== -->
+
+    <script src="Views/js/darkMode.js"></script>
+    <script src="Views/js/comboBox.js"></script>
+    <script src="Views/js/file.js"></script>
+  </body>
+</html>

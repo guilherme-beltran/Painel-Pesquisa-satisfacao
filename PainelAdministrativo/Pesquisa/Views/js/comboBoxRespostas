@@ -1,0 +1,48 @@
+class ComboBoxPerguntas {
+    constructor() {
+        this.wrapperPerguntas = document.querySelector(".dash-content .activity .activity-data table .perguntas .wrapper.perguntas");
+        this.selectBtnPerguntas = this.wrapperPerguntas.querySelector(".dash-content .activity .activity-data table .perguntas .wrapper.perguntas .select-btn.perguntas");
+        this.searchInpPerguntas = this.wrapperPerguntas.querySelector(".dash-content .activity .activity-data table .perguntas .content input");
+        this.optionsPerguntas = this.wrapperPerguntas.querySelector(".dash-content .activity .activity-data table .perguntas .content .options");
+        this.questions = ["O que achou da qualidade do ambiente?", "O que achou do atendimento do garçom?", "O que achou da qualidade do pedido?", "Indicaria a loja para amigos e parceiros?", "Conte-nos sua experiência:"];
+        this.addQuestion();
+
+        this.searchInpPerguntas.addEventListener("keyup", () => {
+            this.filterAndRenderOptions();
+        });
+
+        this.selectBtnPerguntas.addEventListener("click", () => {
+            this.wrapperPerguntas.classList.toggle("active");
+        });
+    }
+
+    addQuestion(selectedQuestion) {
+        this.optionsPerguntas.innerHTML = "";
+        this.questions.forEach(question => {
+            let isSelected = question == selectedQuestion ? "selected" : "";
+            let li = `<li onclick="updateQuestion(this)" class="${isSelected}">${question}</li>`;
+            this.optionsPerguntas.insertAdjacentHTML("beforeend", li);
+        });
+    }
+
+    filterAndRenderOptions() {
+        let arr = [];
+        let searchWord = this.searchInpPerguntas.value.toLowerCase();
+        arr = this.questions.filter(data => {
+            return data.toLowerCase().startsWith(searchWord);
+        }).map(data => {
+            let isSelected = data == this.selectBtnPerguntas.firstElementChild.innerText ? "selected" : "";
+            return `<li onclick="updateQuestion(this)" class="${isSelected}">${data}</li>`;
+        }).join("");
+        this.optionsPerguntas.innerHTML = arr ? arr : `<p style="margin-top: 10px;">Pergunta não encontrada</p>`;
+    }
+}
+
+function updateQuestion(selectedLi) {
+    comboPerguntas.searchInpPerguntas.value = "";
+    comboPerguntas.addQuestion(selectedLi.innerText);
+    comboPerguntas.wrapperPerguntas.classList.remove("active");
+    comboPerguntas.selectBtnPerguntas.firstElementChild.innerText = selectedLi.innerText;
+}
+
+const comboPerguntas = new ComboBoxPerguntas();

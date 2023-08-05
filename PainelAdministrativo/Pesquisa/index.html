@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="Views/css/dashboard.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Dashboard | Painel Adminstrativo</title>
+</head>
+<body>
+    <!----======== MENU ======== -->
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="Views/img/empresaxpto.png" alt="">
+            </div>
+
+            <span class="logo_name">Empresa XPTO</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="index.html">
+                    <i class="material-icons">home</i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li><a href="perguntas.html">
+                    <i class="material-icons">quiz</i>
+                    <span class="link-name">Perguntas</span>
+                </a></li>
+                <li><a href="respostas.html">
+                    <i class="material-icons">question_answer</i>
+                    <span class="link-name">Respostas</span>
+                </a></li>
+                <li><a href="layout.html">
+                    <i class="material-icons">collections</i>
+                    <span class="link-name">Layout</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="material-icons">logout</i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="material-icons">dark_mode</i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <!----======== FIM MENU ======== -->
+    <!----======== CONTEÚDO DA PÁGINA ======== -->
+    <section class="dashboard">
+        <!----======== HEADER ======== -->
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Pesquisar">
+            </div>
+            <div class="sistemas">
+                <div class="wrapper sistemas">
+                    <div class="select-btn">
+                      <span>Trocar sistema</span>
+                      <i class="uil uil-angle-down"></i>
+                    </div>
+                    <div class="content">
+                      <div class="search">
+                        <i class="material-icons">search</i>
+                        <input spellcheck="false" type="text" placeholder="Navegar entre sistemas">
+                      </div>
+                      <ul class="options"></ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="nome_usuario">
+                Olá, Guilherme Beltran
+            </div>
+
+            <div class="imagens">
+                <img src="Views/img/empresaxpto.png" alt="">
+            </div>
+            
+        </div>
+        <!----======== FIM HEADER ======== -->
+        <!----======== CONTEÚDO DASHBOARD ======== -->
+        <div class="dash-content">
+            <!----======== GRAFICOS E DADOS DASHBOARD ======== -->
+            <div class="overview">
+                <div class="title">
+                    <i class="material-icons">dashboard</i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="material-icons">thumb_up</i>
+                        <span class="text">Satisfação dos clientes</span>
+                        <span class="number">96%</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="material-icons">feedback</i>
+                        <span class="text">Perguntas respondidas</span>
+                        <span class="number">1400</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="material-icons">sentiment_very_satisfied</i>
+                        <span class="text">Total de recomendações</span>
+                        <span class="number">684</span>
+                    </div>
+                    <div class="box box4">
+                        <i class="material-icons">sentiment_very_dissatisfied</i>
+                        <span class="text">Clientes que não recomendariam a loja</span>
+                        <span class="number">164</span>
+                    </div>
+                </div>
+            </div>
+            <!----======== FIM GRAFICOS E DADOS DASHBOARD ======== -->
+            <!----======== TABELA ATIVIDADES RECENTES ======== -->
+            <div class="activity">
+                <div class="title">
+                    <i class="material-icons">schedule</i>
+                    <span class="text">Atividades recentes</span>
+                </div>
+
+                <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">Nome</span>
+                        <span class="data-list">Joao da silva</span>
+                        <span class="data-list">Kelly Key</span>
+                        <span class="data-list">Ryan Gomes</span>
+                        <span class="data-list">Manoel Pereira</span>
+                        <span class="data-list">Livia Amaro</span>
+                        <span class="data-list">Luciana Sodré</span>
+                        <span class="data-list">Raphael Soares</span>
+                    </div>
+                    <div class="data telefone">
+                        <span class="data-title">Telefone</span>
+                        <span class="data-list">21987546321</span>
+                        <span class="data-list">21851514842</span>
+                        <span class="data-list">21984515664</span>
+                        <span class="data-list">21995445322</span>
+                        <span class="data-list">21923485611</span>
+                        <span class="data-list">21934565941</span>
+                        <span class="data-list">21975515843</span>
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">Email</span>
+                        <span class="data-list">premshahi@gmail.com</span>
+                        <span class="data-list">deepachand@gmail.com</span>
+                        <span class="data-list">prakashhai@gmail.com</span>
+                        <span class="data-list">manishachand@gmail.com</span>
+                        <span class="data-list">pratimashhai@gmail.com</span>
+                        <span class="data-list">manshahi@gmail.com</span>
+                        <span class="data-list">ganeshchand@gmail.com</span>
+                    </div>
+                    <div class="data status">
+                        <span class="data-title">Bairro</span>
+                        <span class="data-list">Centro</span>
+                        <span class="data-list">Jardim Tropical</span>
+                        <span class="data-list">Santa Rita</span>
+                        <span class="data-list">Austin</span>
+                        <span class="data-list">Palhada</span>
+                        <span class="data-list">Caonze</span>
+                        <span class="data-list">Imperador</span>
+                    </div>
+                    <div class="data data-resposta">
+                        <span class="data-title">Data da resposta</span>
+                        <span class="data-list">2023-07-12</span>
+                        <span class="data-list">2023-07-12</span>
+                        <span class="data-list">2023-07-15</span>
+                        <span class="data-list">2023-07-13</span>
+                        <span class="data-list">2023-07-14</span>
+                        <span class="data-list">2023-07-10</span>
+                        <span class="data-list">2023-07-17</span>
+                    </div>
+                    
+                </div>
+            </div>
+            <!----======== FIM TABELA ATIVIDADES RECENTES ======== -->
+        </div>
+        <!----======== CONTEÚDO DASHBOARD ======== -->
+    </section>
+    <!----======== FIM CONTEÚDO DA PÁGINA ======== -->
+
+    <script src="Views/js/darkMode.js"></script>
+    <script src="Views/js/comboBox.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="Views/css/perguntas.css" />
+
+    <!----===== Iconscout CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <!----===== Ajax ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+    <title>Perguntas | Painel Adminstrativo</title>
+  </head>
+  <body>
+    <!----======== MENU ======== -->
+    <nav>
+      <div class="logo-name">
+        <div class="logo-image">
+          <img src="Views/img/empresaxpto.png" alt="" />
+        </div>
+
+        <span class="logo_name">Empresa XPTO</span>
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">
+              <i class="material-icons">home</i>
+              <span class="link-name">Dahsboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="perguntas.html">
+              <i class="material-icons">quiz</i>
+              <span class="link-name">Perguntas</span>
+            </a>
+          </li>
+          <li>
+            <a href="respostas.html">
+              <i class="material-icons">question_answer</i>
+              <span class="link-name">Respostas</span>
+            </a>
+          </li>
+          <li>
+            <a href="layout.html">
+              <i class="material-icons">collections</i>
+              <span class="link-name">Layout</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="logout-mode">
+          <li>
+            <a href="#">
+              <i class="material-icons">logout</i>
+              <span class="link-name">Logout</span>
+            </a>
+          </li>
+
+          <li class="mode">
+            <a href="#">
+              <i class="material-icons">dark_mode</i>
+              <span class="link-name">Dark Mode</span>
+            </a>
+
+            <div class="mode-toggle">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!----======== FIM MENU ======== -->
+    <!----======== CONTEÚDO DA PÁGINA ======== -->
+    <section class="dashboard">
+      <!----======== HEADER ======== -->
+      <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+
+        <div class="search-box">
+          <i class="uil uil-search"></i>
+          <input type="text" placeholder="Pesquisar" />
+        </div>
+        <div class="sistemas">
+          <div class="wrapper sistemas">
+            <div class="select-btn">
+              <span>Trocar sistema</span>
+              <i class="uil uil-angle-down"></i>
+            </div>
+            <div class="content">
+              <div class="search">
+                <i class="material-icons">search</i>
+                <input
+                  spellcheck="false"
+                  type="text"
+                  placeholder="Navegar entre sistemas"
+                />
+              </div>
+              <ul class="options"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="nome_usuario">Olá, <b>Guilherme Beltran</b></div>
+
+        <div class="imagens">
+          <img src="Views/img/empresaxpto.png" alt="" />
+        </div>
+      </div>
+      <!----======== FIM HEADER ======== -->
+      <!----======== CONTEÚDO DASHBOARD ======== -->
+      <div class="dash-content">
+        <!----======== TABELA QUESTIONÁRIO ======== -->
+        <div class="activity">
+          <div class="title">
+            <i class="material-icons">quiz</i>
+            <span class="text">Questionário</span>
+          </div>
+
+          
+          <div class="activity-data">
+            <table>
+              <tr>
+                <th hidden>Id</th>
+                <th colspan="3">Perguntas</th>
+              </tr>
+              <tr>
+                <td id="idPergunta1" hidden>1</td>
+                <td id="1">O que achou da qualidade do ambiente?</td>
+                <td><a href="#" role="button" class="btnEditar pergunta1">Editar</a></td>
+              </tr>
+              <tr>
+                <td id="idPergunta2" hidden>2</td>
+                <td id="2">O que achou do atendimento do garçom?</td>
+                <td><a href="#" role="button" class="btnEditar pergunta2">Editar</a></td>
+              </tr>
+              <tr>
+                <td id="idPergunta3" hidden>3</td>
+                <td id="3">O que achou da qualidade do pedido?</td>
+                <td><a href="#" role="button" class="btnEditar pergunta3">Editar</a></td>
+              </tr>
+              <tr>
+                <td id="idPergunta4" hidden>4</td>
+                <td id="4">Indicaria a loja para amigos e parceiros?</td>
+                <td><a href="#" role="button" class="btnEditar pergunta4">Editar</a></td>
+              </tr>
+              <tr>
+                <td id="idPergunta5" hidden>5</td>
+                <td id="5">Conte-nos sua experiência:</td>
+                <td><a href="#" role="button" class="btnEditar pergunta5">Editar</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!----======== FIM TABELA QUESTIONÁRIO ======== -->
+        <div class="manipularForm">
+          <a href="#" role="button" class="btnSalvar" id="success">Salvar</a>
+        </div>
+
+        <!----======== MODAL EDITAR ======== -->
+        <section class="section_modal editar">
+            <span class="overlay"></span>
+            <div class="modal-box">
+                <i class="uil uil-edit"></i>
+              <h2>Alterar pergunta</h2>
+              <input type="text" placeholder="Pesquisar" />
+              <div class="buttons">
+                <button class="btnFinalizarAlteracao" id="btnFinalizarAlteracao">Finalizar alteração</button>
+                <button class="close-btn" id="close-btn">Fechar</button>
+              </div>
+            </div>
+          </section>
+        <!----======== FIM MODAL EDITAR ======== -->
+
+        <!----======== MODAL SALVAR ======== -->
+        <ul class="notifications"></ul>
+        <!----======== FIM MODAL SALVAR ======== -->
+
+      </div>
+      <!----======== FIM CONTEÚDO DASHBOARD ======== -->
+    </section>
+
+    <!----======== FIM CONTEÚDO DA PÁGINA ======== -->
+
+    <script src="Views/js/darkMode.js"></script>
+    <script src="Views/js/comboBox.js"></script>
+    <script src="Views/js/modalEditar.js"></script>
+    <script src="Views/js/notificacao.js"></script>
+</html>

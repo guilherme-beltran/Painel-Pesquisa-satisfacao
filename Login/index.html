@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Views/css/login.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box sigin">
+        <h2>Já possui uma conta?</h2>
+        <button class="btnSigin">Acesse</button>
+      </div>
+      <div class="box forgotPassword">
+        <h2>Esqueceu sua senha?</h2>
+        <button class="btnEsqueciSenha">Esqueci minha senha</button>
+      </div>
+      <div class="formBox">
+        <div class="form signinForm">
+          <form action="#">
+            <h3>Faça seu login</h3>
+            <input type="text" placeholder="Digite seu e-mail" />
+            <input type="password" placeholder="Digite sua senha" />
+            <input type="submit" value="Entrar" formaction="../PainelAdministrativo/Pesquisa/index.html">
+          </form>
+          <h2>Esqueceu sua senha?</h2>
+          <button class="btnEsqueciSenha">Esqueci minha senha</button>
+        </div>
+
+        <div class="form forgotPasswordForm">
+          <form action="#">
+            <h3>Informe seu e-mail</h3>
+            <input
+              type="email"
+              id="txtEmail"
+              placeholder="Qual seu e-mail cadastrado?"
+            />
+            <div class="content">
+              <button class="button">
+                Enviar e-mail <span class="loader"></span>
+              </button>
+            </div>
+          </form>
+          <h2>Já possui uma conta?</h2>
+          <button class="btnSigin">Acesse</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast">
+      <div class="toast-content">
+        <i class="material-icons">warning</i>
+        <div class="message">
+          <span class="text text-1"></span>
+          <span class="text text-2"></span>
+        </div>
+      </div>
+      <div class="progress"></div>
+    </div>
+    
+    <script src="Views/js/login.js"></script>
+  </body>
+</html>
